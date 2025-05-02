@@ -1,4 +1,4 @@
-name: output worklow 
+name: GetOutput Workflow 
 on: workflow_dispatch
 jobs:
     infojob:
