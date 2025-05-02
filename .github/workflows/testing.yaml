@@ -1,0 +1,19 @@
+name: testing workflow
+on: push
+jobs:
+    tests:
+        runs-on: ubuntu-latest
+        steps:
+            - name: get code
+              uses: action/checkout@4
+            
+            - name: Install NodeJS 
+              uses: actions/setup-node@v4
+              with: 
+                node-version: 18
+            
+            - name: Install dependency
+              run: npm ci 
+
+            - name: Run Test
+              run : npm test
